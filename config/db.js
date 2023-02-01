@@ -1,14 +1,14 @@
-import mongoose from 'mongoose';
-import dotenv from 'dotenv';
-dotenv.config({ path: './.env' });
+import mongoose from "mongoose";
+import dotenv from "dotenv";
+dotenv.config({ path: "./.env" });
 
 const connectDB = async () => {
   try {
-    await mongoose.connect(process.env.MONGO_URI, {
+    await mongoose.connect("mongodb://3.7.231.166/url_shorter", {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
-    console.log('Database Connected');
+    console.log("Database Connected");
   } catch (err) {
     console.error(err.message);
     process.exit(1);

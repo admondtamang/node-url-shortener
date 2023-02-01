@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const UrlSchema = new mongoose.Schema({
   urlId: {
@@ -13,6 +13,10 @@ const UrlSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  ip: {
+    type: [String],
+    required: false,
+  },
   clicks: {
     type: Number,
     required: true,
@@ -24,4 +28,4 @@ const UrlSchema = new mongoose.Schema({
   },
 });
 
-export default mongoose.model('Url', UrlSchema);
+export default mongoose.model("Url", UrlSchema);
